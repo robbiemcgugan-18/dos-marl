@@ -1,0 +1,17 @@
+DEBUG get_query: SELECT value FROM swat_s1 WHERE name = ? AND pid = ?
+DEBUG set_query: UPDATE swat_s1 SET value = ? WHERE name = ? AND pid = ?
+DEBUG: plc3 is an Ethernet/IP device.
+DEBUG EnipProtocol server addr:  192.168.1.30
+DEBUG: concatenating server address with default port.
+DEBUG enip _start_server cmd:  ['/home/robbiemcgugan/anaconda3/envs/venv/bin/python', '-m', 'cpppo.server.enip', '--no-print', '--log', 'logs/protocols_tests_enip_server', '--address', '192.168.1.30:44818', 'LIT301:3=REAL']
+DEBUG: swat-s1 plc3 enters pre_loop
+DEBUG: swat-s1 plc3 enters main_loop.
+DEBUG PLC3 - get lit301: 1.595463
+DEBUG PLC3 - get lit301: 1.595463
+DEBUG PLC3 - get lit301: 1.586389
+DEBUG PLC3 - get lit301: 1.581852
+DEBUG PLC3 - get lit301: 1.572778
+DEBUG PLC3 - get lit301: 1.563704
+DEBUG PLC3 - get lit301: 1.554630
+DEBUG PLC3 - get lit301: 1.545556
+DEBUG PLC3 - get lit301: 1.536481

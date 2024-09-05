@@ -1,0 +1,39 @@
+DEBUG get_query: SELECT value FROM swat_s1 WHERE name = ? AND pid = ?
+DEBUG set_query: UPDATE swat_s1 SET value = ? WHERE name = ? AND pid = ?
+DEBUG: plc1 is an Ethernet/IP device.
+DEBUG EnipProtocol server addr:  192.168.1.10
+DEBUG: concatenating server address with default port.
+DEBUG enip _start_server cmd:  ['/home/robbiemcgugan/anaconda3/envs/venv/bin/python', '-m', 'cpppo.server.enip', '--no-print', '--log', 'logs/protocols_tests_enip_server', '--address', '192.168.1.10:44818', 'FIT101:1=REAL', 'MV101:1=INT', 'LIT101:1=REAL', 'P101:1=INT', 'FIT201:1=REAL', 'MV201:1=INT', 'LIT301:1=REAL']
+DEBUG: swat-s1 plc1 enters pre_loop
+DEBUG: swat-s1 plc1 enters main_loop.
+DEBUG plc1 lit101: 0.00000
+Traceback (most recent call last):
+  File "/home/robbiemcgugan/anaconda3/envs/venv/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/robbiemcgugan/anaconda3/envs/venv/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/robbiemcgugan/anaconda3/envs/venv/lib/python3.9/site-packages/cpppo/server/enip/__main__.py", line 28, in <module>
+    sys.exit( main() )
+  File "/home/robbiemcgugan/anaconda3/envs/venv/lib/python3.9/site-packages/cpppo/server/enip/main.py", line 1292, in main
+    network.server_main( address=bind, address_output=args.address_output, target=enip_srv, kwargs=kwargs,
+  File "/home/robbiemcgugan/anaconda3/envs/venv/lib/python3.9/site-packages/cpppo/server/network.py", line 384, in server_main
+    udp_sock.bind( address )
+OSError: [Errno 98] Address already in use
+WARNING PLC1 - lit101 under LL: 0.00 <= 0.25.
+INFO PLC1 - close p101.
+DEBUG PLC1 - receive fit201: 2.450000
+DEBUG PLC1 - receive lit301: 1.595463
+INFO PLC1 - lit301 (1.60) over H (1.00): -> close p101.
+DEBUG plc1 lit101: 0.81889
+INFO PLC1 - lit101 over H -> close mv101.
+DEBUG PLC1 - receive fit201: 0.000000
+DEBUG PLC1 - receive lit301: 1.581852
+INFO PLC1 - lit301 (1.58) over H (1.00): -> close p101.
+DEBUG plc1 lit101: 0.81889
+INFO PLC1 - lit101 over H -> close mv101.
+DEBUG PLC1 - receive fit201: 0.000000
+DEBUG PLC1 - receive lit301: 1.563704
+INFO PLC1 - lit301 (1.56) over H (1.00): -> close p101.
+DEBUG plc1 lit101: 0.81889
+INFO PLC1 - lit101 over H -> close mv101.
+DEBUG PLC1 - receive fit201: 0.000000
